@@ -25,7 +25,7 @@ class CreatePet {
   @Post()
   @HttpCode(201)
   @Catch(exceptionHandler)
-  public async creatPet(@Body() body: CreatePetDTO, @Req() req: Req) {
+  public async createPet(@Body() body: CreatePetDTO, @Req() req: Req) {
     await createPet.execute(body, req.files!, req.userId)
     return "ok"
   }
